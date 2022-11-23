@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s;
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  background: var(--bg);
+  box-shadow: inset 0px 400px 0px var(--bg-top);
+}
+
+:root {
+  --white: #fff;
+  --bg: #1e202a;
+  --bg-top: #1f212e;
+  --bg-card: #252a41;
+  --light-card: #f0f2fa;
+  --text: #8b97c6;
+  --light-text: #1e202a;
+  --light-bg-top: #f5f7ff;
+  --bg-facebook: #198ff5;
+  --bg-twitter: #1ca0f2;
+  --bg-youTube: #c4032a;
+  --linear1: #fdc468;
+  --linear2: #df4996;
+  --lime-green: #1db489;
+  --red: #dc414c;
+  --toggle: #2f354b;
+  --light-toggle: #e0e4f5;
+  --w700: 700;
+  --w400: 400;
+}
+
+p {
+  font-size: 0.8rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--text);
+  padding-bottom: 1rem;
+}
+
+small {
+  font-weight: var(--w700);
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.4rem;
+}
+
+.container {
+  max-width: 768px;
+  margin: 0 auto;
+  display: grid;
+  width: 100%;
+  place-items: center;
+  padding: 1rem;
+}
+
+.dark-mode {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  column-gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  span {
+    font-size: 0.9rem;
+  }
+
+  .switch {
+    font-size: 15px;
+    position: relative;
+    display: inline-block;
+    width: 4em;
+    height: 2em;
+
+    input {
+      background: transparent;
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: linear-gradient(120deg, #378fe6, #3eda82);
+      transition: 0.4s;
+      border-radius: 100px;
+
+      &:before {
+        position: absolute;
+        content: "";
+        height: 1.5em;
+        width: 1.5em;
+        border-radius: 50%;
+        left: 0.3em;
+        bottom: 0.3em;
+        background-color: var(--bg);
+        transition: 0.4s;
+      }
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(2.1em);
+    }
+  }
+}
+
+.bt-faceboock {
+  border-top: 4px solid var(--bg-facebook);
+
+  small {
+    color: var(--lime-green);
+  }
+}
+
+.bt-twitter {
+  border-top: 4px solid var(--bg-twitter);
+
+  small {
+    color: var(--lime-green);
+  }
+}
+
+.bt-insta {
+  border-top: 4px solid;
+  border-image: linear-gradient(to right, var(--linear1), var(--linear2)) 1;
+
+  small {
+    color: var(--lime-green);
+  }
+}
+
+.bt-youtube {
+  border-top: 4px solid var(--bg-youTube);
+
+  small {
+    color: var(--red);
+  }
+}
+
+.green {
+  color: var(--lime-green);
+}
+
+.red {
+  color: var(--red);
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    height: 100vh;
+  }
+
+  .container {
+    max-width: 1200px;
+  }
+
+  .dark-mode {
+    justify-content: flex-end;
+  }
+}

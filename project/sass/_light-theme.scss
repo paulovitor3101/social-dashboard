@@ -1,0 +1,42 @@
+.light-theme {
+  h1,
+  h2,
+  h3{
+    color: var(--light-text);
+  }
+
+  span, p {
+      color: #63687e;
+  }
+
+  .switch {
+    .slider {
+      &:before {
+        background-color: var(--white);
+      }
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(2em);
+    }
+  }
+
+  .overview {
+    & > h2 {
+      color: #63687e;
+    }
+
+
+  }
+
+  .card {
+    background: var(--light-card) !important;
+
+    &:hover {
+      background: var(--light-toggle) !important;
+    }
+  }
+  .active {
+    background: var(--light-toggle) !important;
+  }
+}
