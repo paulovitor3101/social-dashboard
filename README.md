@@ -17,8 +17,8 @@ The designs were created to the following widths:
 
 ## Silte
 
-- Website - [Space Tourism](https://www.your-site.com)
+- Website - [Social Media Dashboard](https://www.your-site.com)
 
 ![Space tourism are beautiful!][def]
 
-[def]: ./project/design/desktop-preview.jpg "Space Tourism"
+[def]: ./project/design/desktop-preview.jpg "Social Media Dashboard"
