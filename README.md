@@ -17,7 +17,7 @@ The designs were created to the following widths:
 
 ## Silte
 
-- Website - [Social Media Dashboard](https://www.your-site.com)
+- Website - [Social Media Dashboard](https://media-social.netlify.app/)
 
 ![Space tourism are beautiful!][def]
 
