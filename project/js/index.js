@@ -16,7 +16,6 @@ cards.forEach((item) => {
     item.addEventListener('click', active)
 })
 
-
 // Muda O Theme
 function theme() {
     main.classList.toggle('light-theme')
@@ -28,8 +27,25 @@ function theme() {
         body.style.boxShadow = 'inset 0px 400px 0px #1f212e'
         body.style.background = '#1e202a'
     }
-
-
 }
-
 input.addEventListener('click', theme)
+
+
+
+function initAnimaNumeros() {
+    const numeros = document.querySelectorAll('[data-numero]')
+    numeros.forEach((numero) => {
+        const total = +numero.innerHTML
+        const incremento = Math.floor(total / 50)
+        let start = 0
+        const timer = setInterval(() => {
+            start = start + incremento
+            numero.innerHTML = start
+            if (start > total) {
+                numero.innerHTML = total
+                clearInterval(timer)
+            }
+        }, 25 * Math.random())
+    })
+}
+initAnimaNumeros()
